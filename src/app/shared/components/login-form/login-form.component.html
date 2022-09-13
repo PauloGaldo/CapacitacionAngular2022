@@ -1,0 +1,56 @@
+<div class="login-form">
+
+  <!-- <ng-content select=".encabezado"></ng-content>
+
+  <ng-content select="[banner]"></ng-content> -->
+
+  <!-- <form (ngSubmit)="login(loginForm)" #loginForm="ngForm">
+    <span> {{ loginForm.valid }}</span>
+    <span> {{ loginForm.touched }}</span>
+    <span> {{ loginForm.dirty }}</span>
+    <span> {{ loginForm.pristine }}</span>
+
+    <div>
+      <label for="username_1">Email: </label>
+      <input name="username_1" type="email" required [(ngModel)]="email">
+
+      <p *ngIf="loginForm.controls['username_1']?.invalid 
+      && loginForm.controls['username_1']?.touched 
+      && loginForm.controls['username_1']?.dirty">Ingresa correo electronico</p>
+
+    </div>
+
+    <button>Iniciar sesión</button>
+
+  </form> -->
+
+  <form (submit)="login(formLogin)" [formGroup]="formLogin">
+
+    <mat-form-field appearance="legacy">
+      <mat-label>Correo electronico</mat-label>
+      <input matInput placeholder="example@domain.com" formControlName="email">
+      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-hint>Hint</mat-hint> -->
+      <mat-error *ngIf="formLogin.controls['email'].invalid && formLogin.controls['email'].touched">
+        <span *ngIf="formLogin.get('email')?.hasError('required')">Campo requerido</span>
+        <span *ngIf="formLogin.get('email')?.hasError('email')">Email invalido</span>
+        <span *ngIf="formLogin.get('email')?.hasError('maxlength')">Email demasiado largo</span>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="legacy">
+      <mat-label>Contraseña</mat-label>
+      <input matInput placeholder="Ingresa contraseña" formControlName="password">
+      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-hint>Hint</mat-hint> -->
+    </mat-form-field>
+
+    <button mat-raised-button color="accent">Iniciar sesión</button>
+
+  </form>
+
+
+  <!-- 
+  <div>{{email}}</div> -->
+
+  <!-- <button mat-raised-button color="accent" (click)="buttonClicked()">Clickeame!</button> -->
+</div>
