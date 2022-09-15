@@ -6,12 +6,16 @@ import { LoginComponent } from './components/login/login.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 
 
 const MATERIAL_MODULES = [
   MatButtonModule,
   MatFormFieldModule,
   MatInputModule,
+  MatToolbarModule,
+  MatIconModule,
 ];
 
 const SHARED_MODULES = [

@@ -30,7 +30,7 @@ export class LoginFormComponent implements OnInit {
 
     this.formLogin.get('email')?.valueChanges.subscribe((value) => {
 
-      this.formLogin.get('password')?.patchValue(value);
+      // this.formLogin.get('password')?.patchValue(value);
     });
 
     // this.formLogin.patchValue({
