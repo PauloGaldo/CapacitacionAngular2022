@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
 
 
 const MATERIAL_MODULES = [
@@ -21,6 +22,7 @@ const MATERIAL_MODULES = [
 const SHARED_MODULES = [
   FormsModule,
   ReactiveFormsModule,
+  HttpClientModule,
 ];
 
 const SHARED_COMPONENTS = [

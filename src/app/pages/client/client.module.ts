@@ -4,6 +4,7 @@ import { ClientListComponent } from './components/client-list/client-list.compon
 import { ClientFormComponent } from './components/client-form/client-form.component';
 import { ClientComponent } from './client.component';
 import { ClientRoutingModule } from './client-routing.module';
+import { ClientService } from './services/client.service';
 
 
 
@@ -11,11 +12,14 @@ import { ClientRoutingModule } from './client-routing.module';
   declarations: [
     ClientComponent,
     ClientListComponent,
-    ClientFormComponent
+    ClientFormComponent,
   ],
   imports: [
     CommonModule,
-    ClientRoutingModule,
-  ]
+    ClientRoutingModule,    
+  ],
+  providers: [
+    ClientService,
+  ],
 })
 export class ClientModule { }
