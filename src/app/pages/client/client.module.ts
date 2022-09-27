@@ -5,6 +5,7 @@ import { ClientFormComponent } from './components/client-form/client-form.compon
 import { ClientComponent } from './client.component';
 import { ClientRoutingModule } from './client-routing.module';
 import { ClientService } from './services/client.service';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 
@@ -15,6 +16,7 @@ import { ClientService } from './services/client.service';
     ClientFormComponent,
   ],
   imports: [
+    SharedModule,
     CommonModule,
     ClientRoutingModule,    
   ],

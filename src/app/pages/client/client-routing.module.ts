@@ -28,10 +28,10 @@ const routes: Routes = [
         path: 'edit/:idClient',
         component: ClientFormComponent,
       },
-      {
-        path: '**',
-        redirectTo: 'list',
-      }
+      // {
+      //   path: '**',
+      //   redirectTo: 'list',
+      // }
     ],
   },
 ];

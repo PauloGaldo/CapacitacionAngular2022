@@ -1,4 +1,13 @@
-<p>client-list works!</p>
+<p *capHighlight="'yellow'">client-list works!</p>
+
+<h1 [@animation]="trigger"> {{ numero | number:'4.1-5':'es-AR'}} </h1>
+<!-- <h1> {{ numero | currency: 'ARS'}} </h1>
+<h1> {{ numero | currency: 'EUR'}} </h1>
+<h1> {{ numero | currency: 'USD'}} </h1>
+<h1> {{ fecha | date: 'fullDate':'es-AR'}} </h1>
+<h1> {{ 'texto random' | capitalize }} </h1>
+<h1> {{ 'common.buttons.edit' | translate }} </h1> -->
+
 
 <button type="button" mat-raised-button color="accent" (click)="addNewClient()">Nuevo Cliente</button>
 <button type="button" mat-raised-button color="accent" (click)="editClient(4)">Edit Cliente</button>

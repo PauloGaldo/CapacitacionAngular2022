@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { RouterAnimations } from '../core/animations/router-animations';
 
 @Component({
   selector: 'cap-pages',
@@ -18,12 +20,21 @@ import { Component } from '@angular/core';
    <mat-icon>share</mat-icon>
  </button>
 </mat-toolbar>
-  <router-outlet></router-outlet>
+<div [@routeAnimations]="prepareRoute(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>
   `,
   styles: [`.example-spacer {
     flex: 1 1 auto;
-  }`]
+  }`],
+  animations: [
+    RouterAnimations.routeFade,
+  ]
 })
 export class PagesComponent {
+
+  prepareRoute(outlet: RouterOutlet) {
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+  }
 
 }

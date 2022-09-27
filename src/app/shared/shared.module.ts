@@ -9,6 +9,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
+import { HighlightDirective } from './directives/highlight.directive';
+import { CapitalizePipe } from './pipes/capitalize.pipe';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 const MATERIAL_MODULES = [
@@ -23,11 +26,14 @@ const SHARED_MODULES = [
   FormsModule,
   ReactiveFormsModule,
   HttpClientModule,
+  TranslateModule,
 ];
 
 const SHARED_COMPONENTS = [
   LoginComponent,
   LoginFormComponent,
+  HighlightDirective,
+  CapitalizePipe,
 ];
 
 @NgModule({

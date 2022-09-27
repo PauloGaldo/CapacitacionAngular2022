@@ -4,6 +4,9 @@
   "newProjectRoot": "projects",
   "projects": {
     "Capacitacion": {
+      "i18n": {
+        "sourceLocale": "es-AR"
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
