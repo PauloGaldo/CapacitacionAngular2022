@@ -33,7 +33,7 @@ export class ClientListComponent implements OnInit {
     // private DatePipe: DatePipe,
   ) { }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
     setTimeout(() => {
       this.trigger = 'on';
     }, 1000);
@@ -45,9 +45,9 @@ export class ClientListComponent implements OnInit {
       ]
     ).subscribe((response) => {
       console.log(response);
-    }, (error) => {
-
+      this.numero = 10;
     });
+
     this.clientService.getAll().subscribe((response) => {
       // console.table(response);
       this.clientService.getCountryByName('argentina').subscribe((response) => {

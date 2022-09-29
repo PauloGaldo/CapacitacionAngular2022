@@ -32,4 +32,12 @@ describe('ClientListComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('test 1', async () => {
+
+    component.ngOnInit();
+    expect(component.numero).toBe(10);
+
+  });
+
 });
